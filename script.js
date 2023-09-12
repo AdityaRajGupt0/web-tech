@@ -19,37 +19,37 @@ function barClicked() {
 const recipes = [
     {
         name: "Biryani",
-        image: "https://www.thespruceeats.com/thmb/XDBL9gA6A6nYWUdsRZ3QwH084rk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/SES-chicken-biryani-recipe-7367850-hero-A-ed211926bb0e4ca1be510695c15ce111.jpg",
+        image: "https://media.istockphoto.com/id/501150349/photo/chicken-biryani-11.jpg?s=612x612&w=0&k=20&c=w6mDnUx8MnH3rnP9bR0VfWRwrODcbTz-6U07o3Zrs4o=",
         description: "A flavorful and aromatic rice dish with spices, meat, or vegetables.",
         long_description: "Biryani is a popular Indian dish known for its fragrant and flavorful preparation. It consists of long-grain rice cooked with a blend of aromatic spices, saffron, and either meat (such as chicken, mutton, or fish) or vegetables. Biryani is typically garnished with fried onions and served with raita or salad."
     },
     {
         name: "Butter Chicken",
-        image: "https://www.danishfoodlovers.com/wp-content/uploads/2022/09/Butter-chicken-3.jpg",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZqjYWLr_kG8hByBLCPk5co5ucyT10ThBnsg&usqp=CAU",
         description: "Creamy and rich chicken curry cooked in a tomato-based sauce.",
         long_description: "Butter Chicken, also known as Murgh Makhani, is a creamy and indulgent Indian curry. Tender pieces of chicken are marinated in a mixture of yogurt and spices, then simmered in a luscious tomato-based gravy enriched with butter and cream. It's often enjoyed with naan or rice."
     },
     {
         name: "Paneer Tikka",
-        image: "https://media-cdn2.greatbritishchefs.com/media/i0fckzol/img16448.whqc_768x512q80fpt489fpl526.jpg",
+        image: "https://geekrobocook.com/wp-content/uploads/2021/03/6.-Paneer-Tikka.jpg",
         description: "Skewered and grilled cubes of paneer (Indian cottage cheese) with spices.",
         long_description: "Paneer Tikka is a popular vegetarian appetizer in India. Cubes of paneer are marinated in a mixture of yogurt and aromatic spices, then skewered and grilled until they develop a smoky and charred flavor. It's typically served with mint chutney and onion rings."
     },
     {
         name: "Chole Bhature",
-        image: "https://i0.wp.com/swadisht.life/en/wp-content/uploads/2023/02/Chole-Bhature-Recipe.jpg",
+        image: "https://www.mystore.in/s/62ea2c599d1398fa16dbae0a/6479819fd07f76c46875e905/webp/chole-bhature.webp",
         description: "Spicy chickpea curry served with deep-fried bread (bhature).",
         long_description: "Chole Bhature is a North Indian dish that combines spicy chickpea curry (chole) with deep-fried bread (bhature). The chickpea curry is prepared with a blend of spices, tomatoes, and onions, while the bhature is made from fermented dough. It's a hearty and satisfying meal often enjoyed for breakfast or lunch."
     },
     {
         name: "Tandoori Chicken",
-        image: "https://www.foodandwine.com/thmb/Km8A0Dc_s5E8alSiWbehwuk8gI4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Grilled-Tandori-Chicken-FT-RECIPE0323-de1e247b1dbb4c0e9cb11243141eaa50.jpg",
+        image: "https://www.cubesnjuliennes.com/wp-content/uploads/2022/12/Tandoori-Chicken-Recipe.jpg",
         description: "Marinated chicken cooked in a tandoor (clay oven) for a smoky flavor.",
         long_description: "Tandoori Chicken is a classic Indian dish known for its smoky and charred flavor. Chicken pieces are marinated in a mixture of yogurt and tandoori spices, then cooked in a tandoor (clay oven) at high temperatures. The result is tender and flavorful chicken with a vibrant red color."
     },
     {
         name: "Samosa",
-        image: "https://c.ndtvimg.com/2023-03/0m65kep_samosa_625x300_10_March_23.jpg",
+        image: "https://myfoodstory.com/wp-content/uploads/2021/08/Punjabi-Samosa-2.jpg",
         description: "Crispy pastry filled with spiced potatoes and peas.",
         long_description: "Samosa is a popular Indian snack or appetizer. It features a crispy pastry shell filled with a flavorful mixture of spiced potatoes, peas, and sometimes, other ingredients like minced meat. Samosas are deep-fried to perfection and served with chutneys."
     }
