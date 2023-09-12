@@ -1,0 +1,604 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    position: relative;
+    background: url('https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcRJxs_i2UrsRlI4u4uE-bNpyHnB6t9vJU9NqKMCtwGotMBmVaeeWiPVIoCfHdPOlsv1') no-repeat center center fixed;
+    background-size: cover;
+    min-width: 500px;
+    min-height: 200px;
+    color: #fff;
+    font-family: 'Montserrat';
+    height:100vmax;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-height: 100vh;
+  }
+  
+  .bars {
+    /*   background-color:pink; */
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 101;
+    padding-top:9px;
+  }
+  
+  .bar {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+  }
+  
+  span::before,
+  span::after {
+    content: "";
+    display: block;
+    background-color: #fff;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+  }
+  
+  .bar::before {
+    transform: translateY(-9px);
+  }
+  
+  .bar::after {
+    transform: translateY(9px);
+  }
+  
+  .bars.active .bar {
+    background-color: transparent;
+  }
+  
+  .bars.active span::before {
+    animation: top-bar 1s;
+    animation-fill-mode: forwards;
+  }
+  
+  .bars.active span::after {
+    animation: bottom-bar 1s;
+    animation-fill-mode: forwards;
+  }
+  
+  
+  /* Navbar Links CSS */
+  
+  #nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all 1s;
+    z-index: -1;
+    overflow: hidden;
+    opacity: 0;
+  }
+  
+  #nav a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 70vw;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-indent: 50vw;
+    border-radius: 50%;
+    transition: all .5s;
+  }
+  
+  #nav a:hover {
+    background: #357FFD;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  .visible {
+    z-index: 100 !important;
+    opacity: 1 !important;
+  }
+  
+  .shape-circle {
+    border-radius: 50%;
+    width: 20vw;
+    height: 20vw;
+    top: -10vw;
+    right: -10vw;
+    position: absolute;
+    transition: all 1s ease-in-out;
+    background: #f88808;
+    box-shadow: 0 0px 0px rgba(4, 26, 62, 0.5);
+  }
+  
+  nav.visible li:first-child {
+    width: 200vw;
+    height: 200vw;
+    top: -100vw;
+    right: -100vw;
+    z-index: 5;
+    transition: all .5s ease-in-out;
+    box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
+  }
+  
+  nav.visible li:nth-child(2) {
+    width: 150vw;
+    height: 150vw;
+    top: -75vw;
+    right: -75vw;
+    z-index: 6;
+    transition: all .6s ease-in-out;
+    box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
+  }
+  
+  nav.visible li:nth-child(3){
+    width: 100vw;
+    height: 100vw;
+    top: -50vw;
+    right: -50vw;
+    z-index: 7;
+    transition: all .7s ease-in-out;
+    box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
+  }
+  
+  nav.visible li:last-child{
+    width: 50vw;
+    height: 50vw;
+    top: -25vw;
+    right: -25vw;
+    z-index: 8;
+    transition: all .8s ease-in-out;
+    box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
+  }
+  
+  nav.visible li:first-child a {
+    line-height: 265vw !important;
+      text-indent: 15vw !important;
+  
+  }
+  
+  nav.visible li:nth-child(2) a {
+    line-height: 200vw !important;
+    text-indent:17vw !important;
+  }
+  
+  nav.visible li:nth-child(3) a {
+    line-height: 137vw !important;
+      text-indent: 17vw !important;
+    
+  }
+  
+  nav.visible li:last-child a {
+    line-height: 70vw !important;
+    text-indent:12vw !important;
+  }
+  
+  h1 {
+    font-size: 60px;
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    text-transform: uppercase;
+    font-size: 120px;
+    letter-spacing:5px;
+    padding-top:40px;
+  }
+  
+ 
+  
+  @keyframes top-bar {
+    50% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: rotate(45deg) translateY(0);
+    }
+  }
+  
+  @keyframes bottom-bar {
+    50% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: rotate(-45deg) translateY(0);
+    }
+  }
+  
+  
+  @media screen and (max-width:900px) {
+  
+    h1 {
+      padding-top:80px;
+      font-size: 40px;
+    }
+    .chef_img{
+      max-width: 400px;
+      padding-left: 0;
+    }
+    #recipe-search{
+      width: 320px;
+      margin-top: 20px;
+    }
+  }
+
+.chef_img{
+      padding-left: 20%;
+    }
+
+
+
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+h2, h5 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #000000;
+    background-color: rgb(245, 175, 25);
+    /* padding: 5px 20px 5px 20px; */
+    border-radius: 20px;
+    box-shadow: rgba(240, 227, 45, 0.2) 5px 10px 6px 0px;
+    text-align: center;
+}
+
+form {
+    margin-top: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Recipe list styling */
+.recipe {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.recipe img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+
+/* Add custom CSS for the delete (x) icon */
+.recipe-delete-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    background-color: #d3cccc;
+    color: #007BFF;
+    border-radius: 10px;
+}
+
+.recipe-list{
+    height: 70%;
+
+}
+
+.contain{
+    padding-top: 120px;
+    margin-left: 100px;
+    margin-right: 100px;
+    
+}
+
+.card{
+    border-radius: 20px;
+}
+
+.slogan{
+  margin-left: 40px;
+  
+}
+.slogan h1{
+  color: #fff;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.slogan p{
+  color: #fff;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.recipe-display{
+  margin: 20px;
+}
+
+
+@media screen and (min-width: 900px)  {
+  .recipe-display{
+    width: 600px;
+    margin-left: 30%;
+  }
+ 
+}
+
+.card-img-top{
+  width: auto;
+  max-height: 150px;
+  padding: 10px;
+}
+
+.card{
+  border-radius: 20px;
+}
+
+
+.submit-btn{
+  border-radius: 20px;
+  background-color: #ebee4a;
+  color: #000000;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 15px;
+  box-shadow: rgba(240, 227, 45, 0.2) 5px 8px 5px 0px;
+}
+
+input{
+  border-radius: 20px
+}
+label{
+  color: #fff
+}
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+.footer {
+  margin-top: 150px;
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+div.card{
+  background-color: #faf74f;
+  border-radius: 20px;
+  max-height: 300px;
+}
+
+div.card:hover {
+  background-color: #ccf514;
+}
+
+#recipe-search{
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+
+
+
+/* Recipe Popup Styles */
+.recipe-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.recipe-popup-content {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 80%; /* Adjust as needed */
+}
+
+.recipe-popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.recipe-popup img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.recipe-popup h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.recipe-popup p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.recipe-popup-content img{
+  height: 150px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+.recipe-popup-content h2{
+  margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .recipe-popup-content {
+      max-width: 90%; /* Adjust as needed for smaller screens */
+      margin-top: 20%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 10px;
+  }
+  .recipe-popup-content img{
+    height: 100px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+  }
+  .recipe-popup-content h2{
+    margin-bottom: 20px;
+  }
+}
+
